@@ -20,8 +20,6 @@ Typical usage::
 
 from __future__ import annotations
 
-from typing import Optional
-
 
 class DLXNode:
     """A single node in the DLX sparse matrix.
@@ -47,8 +45,8 @@ class DLXNode:
 
     def __init__(
         self,
-        column: Optional[ColumnHeader] = None,
-        row_id: Optional[int] = None,
+        column: ColumnHeader | None = None,
+        row_id: int | None = None,
     ) -> None:
         """Initialize an isolated node with all links pointing to itself.
 
@@ -62,8 +60,8 @@ class DLXNode:
         self.right: DLXNode = self
         self.up: DLXNode = self
         self.down: DLXNode = self
-        self.column: Optional[ColumnHeader] = column
-        self.row_id: Optional[int] = row_id
+        self.column: ColumnHeader | None = column
+        self.row_id: int | None = row_id
 
     def __repr__(self) -> str:
         """Return a developer-friendly representation of this node.

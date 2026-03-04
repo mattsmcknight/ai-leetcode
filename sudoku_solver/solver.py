@@ -33,7 +33,7 @@ from collections.abc import Generator
 from typing import Any
 
 from sudoku_solver.dlx_matrix import DLXMatrix
-from sudoku_solver.dlx_node import ColumnHeader
+from sudoku_solver.dlx_node import DLXNode
 
 
 class DLXSolver:
@@ -152,7 +152,7 @@ class DLXSolver:
         finally:
             self.matrix.uncover(column)
 
-    def _cover_row(self, row_node: Any) -> None:
+    def _cover_row(self, row_node: DLXNode) -> None:
         """Cover all columns touched by the other nodes in *row_node*'s row.
 
         Iterates right from *row_node*, covering each encountered node's
@@ -167,7 +167,7 @@ class DLXSolver:
             self.matrix.cover(other.column)
             other = other.right
 
-    def _uncover_row(self, row_node: Any) -> None:
+    def _uncover_row(self, row_node: DLXNode) -> None:
         """Uncover all columns touched by the other nodes in *row_node*'s row.
 
         Iterates left from *row_node* (reverse of :meth:`_cover_row`),
