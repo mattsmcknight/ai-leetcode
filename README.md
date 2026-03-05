@@ -32,3 +32,24 @@ A complete Sudoku solver implementing Knuth's Dancing Links algorithm in pure Py
 - Performance benchmarks including "AI Escargot" (world's hardest class)
 - Input validation, logging, metrics collection
 - Type-annotated, linted, documented
+
+### `p_equals_np/` -- Computational Exploration of P vs NP
+
+A rigorous computational exploration of the P vs NP problem through Boolean Satisfiability (SAT). Implements formal complexity definitions, multiple SAT solvers, empirical scaling analysis, and a detailed research write-up of why each approach fails to achieve polynomial time.
+
+| Metric | Value |
+|--------|-------|
+| Files | 21 |
+| Lines of code | 10,227 (6,737 source + 3,490 test) |
+| Tests | 402 passing |
+| External dependencies | 0 (numpy/matplotlib optional) |
+| Solvers implemented | 6 (BruteForce, DPLL, Algebraic, Spectral, LP Relaxation, Structural) |
+
+**Highlights**:
+- Formal executable definitions of P, NP, NP-completeness, and polynomial reductions
+- Six SAT solvers spanning four mathematical frameworks (algebraic, spectral, geometric, structural)
+- Random 3-SAT instance generation at the phase transition (clause-to-variable ratio ~4.267)
+- Empirical scaling analysis with polynomial vs exponential curve fitting
+- Structured instances from combinatorial problems (pigeonhole, graph coloring, XOR chains)
+- DIMACS format serialization/parsing for interoperability
+- Comprehensive research analysis documenting why each approach hits an exponential wall
