@@ -1,6 +1,6 @@
-# AI LeetCode Solutions
+# AI Framework Demo
 
-Production-ready LeetCode and algorithm solutions built entirely by AI from a single prompt. Each project in this repository was generated end-to-end -- architecture, implementation, tests, and documentation -- without human intervention beyond the initial instruction. 
+Production-ready algorithm solutions built entirely by AI from a single prompt. Each project in this repository was generated end-to-end -- architecture, implementation, tests, and documentation -- without human intervention beyond the initial instruction. 
 
 For the demo of this system's ability to review and remediate code changes see [https://github.com/mattsmcknight/xai-sdk-python-AI-Review-Demo](https://github.com/mattsmcknight/xai-sdk-python-AI-Review-Demo). Demo includes reports and a PR to demonstrate automated code changes.
 For other domains see the included [ai-system-domain-capabilities.md](ai-system-domain-capabilities.md)
@@ -11,7 +11,7 @@ A single natural-language prompt produces a complete, production-quality codebas
 
 ## Example Prompt
 
-> I want the Agent to  create a sudoku solver using the dancing links algorithm in python in ../ai-leetcode/sudoku_solver. It should create production ready code.
+> I want the Agent to  create a sudoku solver using the dancing links algorithm in python in ./sudoku_solver. It should create production ready code.
 
 That single prompt produced everything below -- no further human input required.
 
